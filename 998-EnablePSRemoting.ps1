@@ -1,5 +1,5 @@
 $base_path = Split-Path $PSCommandPath
-try { . ("C:\sys\ps\lib\_ANSI_COLORS.ps1") } catch { Write-Host "Error loading imports"}
+try { . ("$base_path\_ANSI_COLORS.ps1") } catch { Write-Host "Error loading imports"}
 $clients = Get-Content -Path "$base_path\999-Clients.txt"
 $clients = $clients | Sort-Object
 $clientsTotal = ($clients).Count
